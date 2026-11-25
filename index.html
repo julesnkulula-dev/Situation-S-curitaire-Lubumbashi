@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lubumbashi – Carte des zones à risque</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Lubumbashi, zones à risque par Jules Baruani CNTG</h1>
+  <nav id="periodes" aria-label="Moment de la journée">
+    <button data-p="0" class="actif">Matin <small>5h–11h</small></button>
+    <button data-p="1">Midi <small>11h–16h</small></button>
+    <button data-p="2">Soir <small>16h–21h</small></button>
+    <button data-p="3">Nuit <small>21h–5h</small></button>
+  </nav>
+</header>
+
+<main>
+  <div id="carte"></div>
+  <aside id="panneau">
+    <div class="legende">
+      <span><i style="background:#2e9e5b"></i>Faible</span>
+      <span><i style="background:#e8a317"></i>Moyen</span>
+      <span><i style="background:#d6322e"></i>Élevé</span>
+    </div>
+    <ul id="liste"></ul>
+    <button id="btnSignaler">+ Signaler un lieu</button>
+    <p class="note">Niveaux indicatifs, à remplacer par vos données (police, ONG, témoignages). En cas d’urgence, contactez les autorités locales.</p>
+  </aside>
+</main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

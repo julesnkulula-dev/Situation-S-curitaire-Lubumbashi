@@ -1,0 +1,33 @@
+:root{
+  --fond:#f3efe8; --encre:#1f2a24; --vert:#1d4d3a; --trait:#d9d2c4;
+  --bas:#2e9e5b; --moy:#e8a317; --haut:#d6322e;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{display:flex;flex-direction:column;font-family:Georgia,"Times New Roman",serif;color:var(--encre);background:var(--fond)}
+header{background:var(--vert);color:#fff;padding:10px 14px}
+h1{margin:0 0 8px;font-size:1.15rem;font-weight:700}
+#periodes{display:flex;gap:6px;flex-wrap:wrap}
+#periodes button{flex:1;min-width:76px;border:1px solid rgba(255,255,255,.4);background:transparent;color:#fff;
+  padding:8px 6px;font:inherit;border-radius:6px;cursor:pointer;display:flex;flex-direction:column;align-items:center}
+#periodes button small{font-size:.7rem;opacity:.75}
+#periodes button.actif{background:#fff;color:var(--vert);font-weight:700}
+button:focus-visible{outline:3px solid #ffd35c;outline-offset:2px}
+main{flex:1;display:flex;min-height:0}
+#carte{flex:1;min-height:300px}
+#panneau{width:290px;padding:12px;overflow:auto;border-left:1px solid var(--trait);background:var(--fond);display:flex;flex-direction:column;gap:10px}
+.legende{display:flex;gap:12px;font-size:.85rem}
+.legende i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+#liste{list-style:none;margin:0;padding:0;flex:1}
+#liste li{padding:8px 0;border-bottom:1px solid var(--trait);cursor:pointer;display:flex;justify-content:space-between;gap:8px;font-size:.92rem}
+#liste li b{font-weight:400}
+.pastille{flex:none;width:12px;height:12px;border-radius:50%;margin-top:4px}
+#btnSignaler{padding:10px;border:2px solid var(--vert);background:transparent;color:var(--vert);font:inherit;font-weight:700;border-radius:6px;cursor:pointer}
+#btnSignaler.on{background:var(--vert);color:#fff}
+.note{font-size:.75rem;line-height:1.4;margin:0;color:#5b6660}
+body.signalement #carte{cursor:crosshair}
+@media (max-width:760px){
+  main{flex-direction:column}
+  #carte{flex:none;height:55vh}
+  #panneau{width:100%;border-left:0;border-top:1px solid var(--trait)}
+}
